@@ -1,6 +1,6 @@
 import React from "react";
 import FormsPeople from "./components/FormsPeople";
-import Hola from "./components/Hola";
+import Hola from "./components/Hola"; 
 import {
   BrowserRouter,
   Routes,
@@ -16,13 +16,15 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="btn-group">
-          <Link to="formulario" className="btn btn-dark" > 
-          formulario
+          {/* Navbar */}
+          <Link to="formulario" className="btn btn-dark">
+            formulario
           </Link>
-          <Link to="hola" className="btn btn-dark" > 
-          hola
+          <Link to="hola" className="btn btn-dark">
+            hola
           </Link>
         </div>
+        {/* Rutas */}
         <Routes>
           <Route path="/" exact />
           {/* seleccionamo la ruta */}
