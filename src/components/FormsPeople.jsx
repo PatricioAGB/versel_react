@@ -45,7 +45,7 @@ console.log(Datos.name +' '+ Datos.lastname +' '+Datos.datebirth+' '+Datos.addre
                       className="form-control"
                       type="text"
                       name="name"
-                      pattern='[a-zA-Z]+'
+                      pattern='[a-z A-Z]+'
                       onChange={handleInputChange}
                       minLength={4} maxLength={20}
                       required
@@ -59,6 +59,7 @@ console.log(Datos.name +' '+ Datos.lastname +' '+Datos.datebirth+' '+Datos.addre
                       className="form-control"
                       type="text"
                       name="lastname"
+                      pattern='[a-z A-Z]+'
                       onChange={handleInputChange}
                       minLength={4} maxLength={20}
                       requiered
@@ -83,7 +84,6 @@ console.log(Datos.name +' '+ Datos.lastname +' '+Datos.datebirth+' '+Datos.addre
                       type="text"
                       name="address"
                       onChange={handleInputChange}
-                      pattern='[a-zA-Z]'
                       minLength={4} maxLength={30}
                       required
                     ></input>
