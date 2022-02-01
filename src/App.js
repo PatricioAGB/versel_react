@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FormsPeople from "./components/FormsPeople";
+import Hola from "./components/Hola";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <div className="btn-group">
+          <Link to="formulario" className="btn btn-dark" > 
+          formulario
+          </Link>
+          <Link to="hola" className="btn btn-dark" > 
+          hola
+          </Link>
+        </div>
+        <Routes>
+          <Route path="/" exact />
+          {/* seleccionamo la ruta */}
+          <Route path="/formulario" element={<FormsPeople />} />
+          {/* seleccionamos la ruta */}
+          <Route path="/hola" element={<Hola />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
