@@ -31,7 +31,7 @@ console.log(Datos.name +' '+ Datos.lastname +' '+Datos.datebirth+' '+Datos.addre
           <div class="form-holder">
             <div class="form-content">
               <div class="form-items">
-                <h3>Formulario</h3>
+                <h3>Formulario de Personas</h3>
                 <p>Ingrese sus datos</p>
                 {/* Se crea el formulario */}
                 <form
