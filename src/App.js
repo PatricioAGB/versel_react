@@ -1,8 +1,6 @@
 import React from "react";
 import Curriculum from './components/Curriculum';
 import FormsPeople from "./components/FormsPeople";
-import Hola from "./components/Hola";
-
 import {
   BrowserRouter,
   Routes,
@@ -13,27 +11,25 @@ import {
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <div className="btn-group">
-          <Link to="formulario" className="btn btn-dark" > 
-          formulario
-          </Link>
-          <Link to="hola" className="btn btn-dark" > 
-          hola
+          {/* Navbar */}
+          <Link to="formulario" className="btn btn-dark">
+            formulario
           </Link>
           <Link to="curriculum" className="btn btn-dark" > 
           Curriculum
           </Link>
         </div>
+        {/* Rutas */}
         <Routes>
           <Route path="/" exact />
           {/* seleccionamo la ruta */}
           <Route path="/formulario" element={<FormsPeople />} />
-          {/* seleccionamos la ruta */}
-          <Route path="/hola" element={<Hola />} />
           {/* seleccionamos la ruta */}
           <Route path="/curriculum" element={<Curriculum />} />
         </Routes>
