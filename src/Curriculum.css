@@ -35,9 +35,11 @@ body {
     -webkit-align-items: center;
     align-items: center;
     padding: 60px;
+	
 }
 
  .formulario {
+	border: 3px solid #fff;
 	min-width: 600px;
 	margin-top: 50px;
 	/* background: #fff; */
@@ -132,10 +134,11 @@ body {
     outline: none;
     border: 0px;
      box-shadow: none;
+	 margin-top: 15px;
 }
 
 .formulario button[type="submit"]:hover {
-	background: #0051ff;
+	background: #8D8D8D;
 }
 
 .formulario .exito {
