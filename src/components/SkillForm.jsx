@@ -1,4 +1,7 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
+
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const SkillForm = () => {
    //creando el formulario
@@ -18,21 +21,17 @@ const SkillForm = () => {
    const sendForm = (event) => {
       event.preventDefault();
       console.log(Datos.name + ' ' + Datos.description + ' ' + Datos.level)
-      fetch('http://localhost:9100/application/api/v1/add',{
+      fetch('http://localhost:9200/application/api/v1/add',{
          method : 'Post',
          headers:{'Conten-Type': 'application/json'},
          mode: 'no-cors',
          body: JSON.stringify(Datos)
       })
       .then(res => {
-        return res.json();
+         toast('Registro con exito');
+         return console.log( res );
       })
-      .then(res => {
-        this.setState({
-          name: res.name,
-          location: res.location
-        })
-      });   
+
    }
 
 
@@ -79,6 +78,8 @@ const SkillForm = () => {
                </div>
             </div>
          </div>
+
+         <Toaster />
       </div>
    );
 }
