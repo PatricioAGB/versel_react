@@ -35,7 +35,14 @@ const Curriculum = () => {
         }}
         onSubmit={(valores, {resetForm}) => {
             resetForm();
-            
+            const response =fetch('http://localhost:9997',{
+                    method : 'Post',
+                    headers:{
+                        'Conten-Type': 'application/json',
+                      },
+                      mode: 'no-cors',
+                    body: JSON.stringify(valores)
+                  })
             // console.log(valores); 
             //  console.log('Formulario enviado');
             alert(JSON.stringify(valores));
