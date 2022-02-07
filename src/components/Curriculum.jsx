@@ -48,6 +48,7 @@ const Curriculum = () => {
             alert(JSON.stringify(valores));
              cambiarFormularioEnviado(true);
              setTimeout(()=> cambiarFormularioEnviado(false),5000);
+             return response.JSON();
       }}>
         {({values,errors , touched, handleChange, handleBlur}) => (
           <Form className="formulario">
