@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const EvaluationForm =() =>{
   const [Datos, setDatos] = useState({
@@ -25,7 +26,8 @@ const EvaluationForm =() =>{
          body: JSON.stringify(Datos)
       })
       .then(res => {
-        return res.json();
+        toast('Registro con exito');
+        return console.log(res);
       })
   }
   return(
