@@ -1,5 +1,7 @@
 import React, { useState} from 'react';
 
+
+
 const EvaluationForm =() =>{
   const [Datos, setDatos] = useState({
     date:'',
@@ -15,19 +17,18 @@ const EvaluationForm =() =>{
     });
   };
   // Se muestra los datos en consola 
-  const enviarFormulario = (event) =>{
+  const sendForm = (event) => {
     event.preventDefault();
-  console.log(Datos.date +' '+ Datos.name +' '+Datos.observations+' '+Datos.score)
-  fetch('http://localhost:9100/application/api/v1/add',{
-         method : 'Post',
-         headers:{'Conten-Type': 'application/json'},
-         mode: 'no-cors',
-         body: JSON.stringify(Datos)
-      })
-      .then(res => {
-        return res.json();
-      })
-  }
+    console.log(Datos.date + ' ' + Datos.name + ' '+ Datos.observations +' '+Datos.score +' ')
+    fetch('http://127.0.0.1:9400/application/api/v1/add',{
+       method : 'Post',
+       headers:{'Conten-Type': 'application/json'},
+       mode: 'no-cors',
+       body: JSON.stringify(Datos)
+    })
+    
+
+ }
   return(
     <div className="form-body "margin-left="auto" margin-right="auto">
       <div className="row">
@@ -36,7 +37,7 @@ const EvaluationForm =() =>{
           <div className="form-items">
             <h3>Formulario de Evaluación</h3>
             <p>Llenar los campos.</p>
-            <form className="requires-validation" onSubmit={enviarFormulario} noValidate>
+            <form className="requires-validation" onSubmit={sendForm} noValidate>
             
               <div className="col-md-12">
                 <input className="form-control" type="date" name="date" onChange={handleInputChange} required></input>
