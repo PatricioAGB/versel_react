@@ -18,6 +18,21 @@ const SkillForm = () => {
    const sendForm = (event) => {
       event.preventDefault();
       console.log(Datos.name + ' ' + Datos.description + ' ' + Datos.level)
+      fetch('http://localhost:9100/application/api/v1/add',{
+         method : 'Post',
+         headers:{'Conten-Type': 'application/json'},
+         mode: 'no-cors',
+         body: JSON.stringify(Datos)
+      })
+      .then(res => {
+        return res.json();
+      })
+      .then(res => {
+        this.setState({
+          name: res.name,
+          location: res.location
+        })
+      });   
    }
 
 
@@ -32,7 +47,7 @@ const SkillForm = () => {
                      <form className="requires-validation" onSubmit={sendForm} noValidate>
 
                         <div className="col-md-12">
-                           <label htmlFor="name">Nombre:</label>
+                           <label htmlFor="name">Nombre del lenguaje:</label>
                            <input className="form-control" type="text" name="name" placeholder="nombre" onChange={handleInputChange} required></input>
                            <div className="valid-feedback">date field is valid!</div>
                            <div className="invalid-feedback">date field cannot be blank!</div>
