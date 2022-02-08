@@ -7,6 +7,7 @@ const Curriculum = () => {
     <>
       <Formik 
         initialValues={{
+          collection: 'curriculum',
           nombre: '',
           direccion: '',
           correo: '',
@@ -35,7 +36,7 @@ const Curriculum = () => {
         }}
         onSubmit={(valores, {resetForm}) => {
             resetForm();
-            const response =fetch('http://localhost:9997',{
+            const response =fetch('http://localhost:9100/application/api/v1/add',{
                     method : 'Post',
                     headers:{
                         'Conten-Type': 'application/json',

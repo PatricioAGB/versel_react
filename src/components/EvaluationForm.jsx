@@ -3,6 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const EvaluationForm =() =>{
   const [Datos, setDatos] = useState({
+    collection: 'evaluation',
     date:'',
     name:'',
     observations:'',

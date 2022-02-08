@@ -4,6 +4,7 @@ import React,{Fragment,useState} from 'react';
  //creando el formulario
 const FormsPeople = () => {
 const [Datos, setDatos] = useState({
+  collection: 'people',
   name:'',
   lastname:'',
   datebirth:'',
