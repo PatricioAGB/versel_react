@@ -13,7 +13,9 @@
 html, body {
     height: 100%;
     background-color: #152733;
-    overflow: hidden;
+    overflow: visible;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 
 
@@ -148,4 +150,24 @@ html, body {
 
 .valid-feedback{
    color: #2acc80;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #de2c58;
 }
