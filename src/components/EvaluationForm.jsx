@@ -20,7 +20,7 @@ const EvaluationForm =() =>{
   const sendForm = (event) => {
     event.preventDefault();
     console.log(Datos.date + ' ' + Datos.name + ' '+ Datos.observations +' '+Datos.score +' ')
-    fetch('http://127.0.0.1:9400/application/api/v1/add',{
+    fetch('http://localhost:9400/application/api/v1/add',{
        method : 'Post',
        headers:{'Conten-Type': 'application/json'},
        mode: 'no-cors',
