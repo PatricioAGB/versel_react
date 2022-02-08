@@ -22,7 +22,12 @@ const handleInputChange = (event) => {
 // Se muestra los datos en consola 
 const enviarFormulario = (event) =>{
   event.preventDefault();
-console.log(Datos.name +' '+ Datos.lastname +' '+Datos.datebirth+' '+Datos.address+' '+Datos.Pathfoto+' '+Datos.PathCv)
+  fetch('http://localhost:9100/application/api/v1/add',{
+    method : 'Post',
+    headers:{'Conten-Type': 'application/json'},
+    mode: 'no-cors',
+    body: JSON.stringify(Datos)
+ })
 }
   return (
     <Fragment>
