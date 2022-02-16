@@ -39,6 +39,7 @@ body {
 }
 
  .formulario {
+	color:#de2c58;
 	border: 3px solid #fff;
 	min-width: 600px;
 	margin-top: 50px;
@@ -46,6 +47,9 @@ body {
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: rgba(105, 72, 72, 0.16) 0px 1px 4px;
+}
+.form-acl{
+    color:#de2c58;
 }
 
 /* .formulario > div {

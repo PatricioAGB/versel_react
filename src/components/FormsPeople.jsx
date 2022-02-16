@@ -6,7 +6,7 @@ const FormsPeople = () => {
 const [Datos, setDatos] = useState({
   collection: 'people',
   name:'',
-  lastname:'',
+  lastnames:'',
   datebirth:'',
   address:'',
   Pathfoto:'',
@@ -46,6 +46,9 @@ const enviarFormulario = (event) =>{
                 >
                   {/* Ingresar el nombre */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Nombre:
+                  </label>
                     <input
                       placeholder="Ingresar Nombre"
                       className="form-control"
@@ -58,13 +61,16 @@ const enviarFormulario = (event) =>{
                     />
                   
                   </div>
-                  {/* Ingresar el Apellido */}
+                  {/* Ingresar el Apellidos */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Apellidos:
+                  </label>
                     <input
-                      placeholder="Ingresar Apellido"
+                      placeholder="Ingresar Apellidos"
                       className="form-control"
                       type="text"
-                      name="lastname"
+                      name="lastnames"
                       pattern='[a-z A-Z]+'
                       onChange={handleInputChange}
                       minLength={4} maxLength={20}
@@ -74,6 +80,9 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar fecha de nacimiento */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Fecha de Nacimiento:
+                  </label>
                     <input
                       placeholder="Ingresar fecha de nacimiento"
                       className="form-control"
@@ -84,6 +93,9 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Dirección */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Dirección:
+                  </label>
                     <input
                       placeholder="Ingresar Dirección"
                       className="form-control"
@@ -96,8 +108,11 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Foto */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Enlace de Imágen:
+                  </label>
                     <input
-                      placeholder="Ingresar foto"
+                      placeholder="Ingresar enlace de imágen"
                       className="form-control"
                       type="text"
                       name="Pathfoto"
@@ -107,6 +122,9 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Curriculum Vitae */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Curriculum Vitae:
+                  </label>
                     <input
                       placeholder="Ingresar Curriculum Vitae"
                       className="form-control"
@@ -117,9 +135,9 @@ const enviarFormulario = (event) =>{
                     ></input>
                   </div>
                   {/* Boton */}
-                  <div className="col-md-1">
-                    <button className="btn btn-primary">enviar</button>
-                  </div>
+                  <div className="form-button mt-3">
+                  <button id="submit" type="submit" className="btn btn-primary">Guardar</button>
+                </div>
                 </form>
               </div>
             </div>

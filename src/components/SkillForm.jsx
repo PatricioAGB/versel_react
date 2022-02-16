@@ -50,28 +50,28 @@ const SkillForm = () => {
 
                         <div className="col-md-12">
                            <label htmlFor="name">Nombre:</label>
-                           <input className="form-control" type="text" name="name" placeholder="nombre" onChange={handleInputChange} required></input>
+                           <input className="form-control" type="text" name="name" placeholder="Ingrese Nombre y Apellidos" onChange={handleInputChange} required></input>
                            <div className="valid-feedback">date field is valid!</div>
                            <div className="invalid-feedback">date field cannot be blank!</div>
                         </div>
 
                         <div className="col-md-12">
                            <label htmlFor="name">Habilidad o tecnología:</label>
-                           <input className="form-control" type="text" name="skill" placeholder="habilidad o tecnología" onChange={handleInputChange} required></input>
+                           <input className="form-control" type="text" name="skill" placeholder="Ingrese habilidad o tecnología" onChange={handleInputChange} required></input>
                            <div className="valid-feedback">date field is valid!</div>
                            <div className="invalid-feedback">date field cannot be blank!</div>
                         </div>
 
                         <div className="col-md-12">
                            <label htmlFor="description">Descripción:</label>
-                           <input className="form-control" type="text" name="description" placeholder="descripcion" onChange={handleInputChange} required></input>
+                           <input className="form-control" type="text" name="description" placeholder="Ingrese descripción de la habilidado tecnologia" onChange={handleInputChange} required></input>
                            <div className="valid-feedback">name field is valid!</div>
                            <div className="invalid-feedback">name field cannot be blank!</div>
                         </div>
 
                         <div className="col-md-12">
                            <label htmlFor="level">Nivel de Conocimiento:</label>
-                           <input className="form-control" type="range" id="level" name="level" min="0" max="3" onChange={handleInputChange} required></input>
+                           <input className="form-control" type="range" id="level" name="level" min="0" max="3"  onChange={handleInputChange} required></input>
                            <div className="valid-feedback">observations field is valid!</div>
                            <div className="invalid-feedback">observations field cannot be blank!</div>
                         </div>
@@ -81,7 +81,7 @@ const SkillForm = () => {
                               id="submit"
                               type="submit"
                               className="btn btn-primary"
-                           >Guardar</button>
+                           >Enviar</button>
                         </div>
                      </form>
                   </div>

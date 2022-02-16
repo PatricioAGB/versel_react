@@ -22,7 +22,7 @@ const EvaluationForm = () => {
   const sendForm = (event) => {
     event.preventDefault();
     console.log(Datos.date + ' ' + Datos.name + ' ' + Datos.observations + ' ' + Datos.score)
-    fetch('http://localhost:9400/application/api/v1/add', {
+    fetch('http://localhost:9100/application/api/v1/add', {
       method: 'Post',
       headers: { 'Conten-Type': 'application/json' },
       mode: 'no-cors',
@@ -44,25 +44,29 @@ const EvaluationForm = () => {
               <form className="requires-validation" onSubmit={sendForm} noValidate>
 
                 <div className="col-md-12">
+                <label htmlFor="date">Fecha de Evaluación:</label>
                   <input className="form-control" type="date" name="date" onChange={handleInputChange} required></input>
                   <div className="valid-feedback">date field is valid!</div>
                   <div className="invalid-feedback">date field cannot be blank!</div>
                 </div>
 
                 <div className="col-md-12">
-                  <input className="form-control" type="text" name="name" onChange={handleInputChange} placeholder="Nombre" required></input>
+                <label htmlFor="name">Nombre:</label>
+                  <input className="form-control" type="text" name="name" onChange={handleInputChange} placeholder="Ingrese nombre y apellidos" required></input>
                   <div className="valid-feedback">name field is valid!</div>
                   <div className="invalid-feedback">name field cannot be blank!</div>
                 </div>
 
                 <div className="col-md-12">
-                  <input className="form-control" type="text" name="observations" onChange={handleInputChange} placeholder="Observaciones" required></input>
+                <label htmlFor="obseravations">Observaciones:</label>
+                  <input className="form-control" type="text" name="observations" onChange={handleInputChange} placeholder="ingrese observaciones generales" required></input>
                   <div className="valid-feedback">observations field is valid!</div>
                   <div className="invalid-feedback">observations field cannot be blank!</div>
                 </div>
 
                 <div className="col-md-12">
-                  <select className="form-select mt-3" name="score" onChange={handleInputChange} required>
+                <label htmlFor="evaluation">Evaluacion:</label>
+                  <select className="form-control" type="select" name="score" onChange={handleInputChange} required>
                     <option disabled defaultValue="">Evaluación</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
