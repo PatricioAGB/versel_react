@@ -7,6 +7,7 @@ const [Datos, setDatos] = useState({
   collection: 'people',
   name:'',
   lastnames:'',
+  d_number:'',
   datebirth:'',
   address:'',
   Pathfoto:'',
@@ -78,6 +79,12 @@ const enviarFormulario = (event) =>{
                     ></input>
                     <br />
                   </div>
+                  <div className="col-md-12">
+                  <label htmlFor="d_number">Número de Documento:</label>
+                  <input className="form-control" type="text" name="d_number" placeholder="Ingrese número de documento" onChange={handleInputChange} required></input>
+                  <div className="valid-feedback">d_number field is valid!</div>
+                  <div className="invalid-feedback">d_number field cannot be blank!</div>
+                </div>
                   {/* Ingresar fecha de nacimiento */}
                   <div className="col-md-12">
                   <label htmlFor="level">
@@ -123,7 +130,7 @@ const enviarFormulario = (event) =>{
                   {/* Ingresar Curriculum Vitae */}
                   <div className="col-md-12">
                   <label htmlFor="level">
-                    Curriculum Vitae:
+                    Currículum Vitae:
                   </label>
                     <input
                       placeholder="Ingresar Curriculum Vitae"

@@ -30,7 +30,7 @@ function App() {
             <center>Persona</center>
           </Link>
           <Link to="curriculum" className="btn-primary d-flex align-items-center" > 
-            <center>Curriculum</center>
+            <center>Currículum</center>
           </Link>
           <Link to="evaluacion" className="btn-primary d-flex align-items-center" > 
           <center>Evaluación</center>

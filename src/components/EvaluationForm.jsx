@@ -7,6 +7,7 @@ const EvaluationForm = () => {
   const [Datos, setDatos] = useState({
     collection: 'evaluation',
     date: '',
+    d_number: '',
     name: '',
     observations: '',
     score: '',
@@ -21,7 +22,7 @@ const EvaluationForm = () => {
   // Se muestra los datos en consola 
   const sendForm = (event) => {
     event.preventDefault();
-    console.log(Datos.date + ' ' + Datos.name + ' ' + Datos.observations + ' ' + Datos.score)
+    console.log(Datos.date + ' ' + Datos.d_number + ' ' + Datos.name + ' ' + Datos.observations + ' ' + Datos.score)
     fetch('http://localhost:9100/application/api/v1/add', {
       method: 'Post',
       headers: { 'Conten-Type': 'application/json' },
@@ -51,6 +52,13 @@ const EvaluationForm = () => {
                 </div>
 
                 <div className="col-md-12">
+                  <label htmlFor="d_number">Número de Documento:</label>
+                  <input className="form-control" type="text" name="d_number" placeholder="Ingrese número de documento" onChange={handleInputChange} required></input>
+                  <div className="valid-feedback">d_number field is valid!</div>
+                  <div className="invalid-feedback">d_number field cannot be blank!</div>
+                </div>
+
+                <div className="col-md-12">
                 <label htmlFor="name">Nombre:</label>
                   <input className="form-control" type="text" name="name" onChange={handleInputChange} placeholder="Ingrese nombre y apellidos" required></input>
                   <div className="valid-feedback">name field is valid!</div>
@@ -65,7 +73,7 @@ const EvaluationForm = () => {
                 </div>
 
                 <div className="col-md-12">
-                <label htmlFor="evaluation">Evaluacion:</label>
+                <label htmlFor="evaluation">Evaluación:</label>
                   <select className="form-control" type="select" name="score" onChange={handleInputChange} required>
                     <option disabled defaultValue="">Evaluación</option>
                     <option value="1">1</option>
