@@ -12,11 +12,19 @@
 
 html, body {
     height: 100%;
-    background-color: #152733;
+    background-image: url("https://scontent.fscl21-1.fna.fbcdn.net/v/t1.6435-9/59810110_2135093173223125_4856628149347155968_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=FiHnDLsFWWYAX_YZM-x&_nc_ht=scontent.fscl21-1.fna&oh=00_AT_HmBzEz0YBBfXOMAJ-wOtlLWKK_9OQ_hCNOJ1vDPVuag&oe=62346BEB");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    border-color: #495056;
+    border-width: 5px;
+    background-repeat: no-repeat;
+    background-color: #de2c58;
     overflow: visible;
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
 }
+
+
 
 
 .form-holder {
@@ -55,6 +63,7 @@ html, body {
     text-align: left;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    background-color:#de2c58;;
 }
 
 .form-content h3 {
@@ -77,13 +86,16 @@ html, body {
     line-height: 20px;
     margin-bottom: 30px;
 }
+.form-acl{
+    color:#de2c58;
+}
 
 
 .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.form-content input[type=text], .form-content input[type=password], .form-content [type=email], .form-content [type=date],.form-content select{
     width: 100%;
     padding: 9px 20px;
     text-align: left;
@@ -100,8 +112,9 @@ html, body {
 }
 
 
+
 .btn-primary{
-    background-color: #6C757D;
+    background-color: #1F2937;
     outline: none;
     border: 0px;
      box-shadow: none;
@@ -169,5 +182,5 @@ html, body {
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #de2c58;
+	background-color: #1F2937;
 }
