@@ -72,7 +72,7 @@ const SkillForm = () => {
 
                         <div className="col-md-12">
                            <label htmlFor="description">Descripción:</label>
-                           <input className="form-control" type="text" name="description" placeholder="Ingrese descripción de la habilidado tecnologia" onChange={handleInputChange} required></input>
+                           <input className="form-control" type="text" name="description" placeholder="Ingrese descripción de la habilidado tecnología" onChange={handleInputChange} required></input>
                            <div className="valid-feedback">name field is valid!</div>
                            <div className="invalid-feedback">name field cannot be blank!</div>
                         </div>

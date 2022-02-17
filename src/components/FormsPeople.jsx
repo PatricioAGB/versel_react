@@ -39,7 +39,7 @@ const enviarFormulario = (event) =>{
             <div class="form-content">
               <div class="form-items">
                 <h3>Formulario de Personas</h3>
-                <p>Ingrese sus datos</p>
+                <p>Llenar los campos.</p>
                 {/* Se crea el formulario */}
                 <form
                   className="requires-validation"
