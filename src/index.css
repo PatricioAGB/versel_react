@@ -24,9 +24,7 @@ html, body {
     scrollbar-width: thin;
 }
 
-html, footer{
-    
-}
+
 
 
 .form-holder {
@@ -97,7 +95,7 @@ html, footer{
     color: #fff;
 }
 
-.form-content input[type=text], .form-content input[type=password], .form-content [type=email], .form-content [type=date], .form-content select {
+.form-content input[type=text], .form-content input[type=password], .form-content [type=email], .form-content [type=date],.form-content select{
     width: 100%;
     padding: 9px 20px;
     text-align: left;
@@ -112,6 +110,7 @@ html, footer{
     transition: all 0.3s ease;
     margin-top: 16px;
 }
+
 
 
 .btn-primary{

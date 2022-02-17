@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../inputRange.css';
 import toast, { Toaster } from 'react-hot-toast';
 
 // RED ACL #de2c58
@@ -79,7 +79,7 @@ const SkillForm = () => {
 
                         <div className="col-md-12">
                            <label htmlFor="level">Nivel de Conocimiento:</label>
-                           <input className="form-control" type="range" id="level" name="level" min="0" max="3"  onChange={handleInputChange} required></input>
+                           <input className="form-control win10-thumb" type="range" id="level" name="level"  min="0" max="3"  onChange={handleInputChange} required></input>
                            <div className="valid-feedback">observations field is valid!</div>
                            <div className="invalid-feedback">observations field cannot be blank!</div>
                         </div>
