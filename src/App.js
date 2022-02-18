@@ -1,3 +1,4 @@
+//Creado por: Equipo Apache Febrero 2022
 import React from "react";
 //components
 import Curriculum from './components/Curriculum';
