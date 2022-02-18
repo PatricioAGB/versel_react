@@ -19,10 +19,6 @@
      border: none;
  }
  
- .form-control:focus{
-     background-color: #ff606e !important;
- }
-
  input[type="range"] {
      color: #ff606e;
      --thumb-height: 1.125em;
