@@ -4,8 +4,10 @@ import React,{Fragment,useState} from 'react';
  //creando el formulario
 const FormsPeople = () => {
 const [Datos, setDatos] = useState({
+  collection: 'people',
   name:'',
-  lastname:'',
+  lastnames:'',
+  d_number:'',
   datebirth:'',
   address:'',
   Pathfoto:'',
@@ -37,7 +39,7 @@ const enviarFormulario = (event) =>{
             <div class="form-content">
               <div class="form-items">
                 <h3>Formulario de Personas</h3>
-                <p>Ingrese sus datos</p>
+                <p>Llenar los campos.</p>
                 {/* Se crea el formulario */}
                 <form
                   className="requires-validation"
@@ -45,6 +47,9 @@ const enviarFormulario = (event) =>{
                 >
                   {/* Ingresar el nombre */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Nombre:
+                  </label>
                     <input
                       placeholder="Ingresar Nombre"
                       className="form-control"
@@ -57,13 +62,16 @@ const enviarFormulario = (event) =>{
                     />
                   
                   </div>
-                  {/* Ingresar el Apellido */}
+                  {/* Ingresar el Apellidos */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Apellidos:
+                  </label>
                     <input
-                      placeholder="Ingresar Apellido"
+                      placeholder="Ingresar Apellidos"
                       className="form-control"
                       type="text"
-                      name="lastname"
+                      name="lastnames"
                       pattern='[a-z A-Z]+'
                       onChange={handleInputChange}
                       minLength={4} maxLength={20}
@@ -71,8 +79,17 @@ const enviarFormulario = (event) =>{
                     ></input>
                     <br />
                   </div>
+                  <div className="col-md-12">
+                  <label htmlFor="d_number">Número de Documento:</label>
+                  <input className="form-control" type="text" name="d_number" placeholder="Ingrese número de documento" onChange={handleInputChange} required></input>
+                  <div className="valid-feedback">d_number field is valid!</div>
+                  <div className="invalid-feedback">d_number field cannot be blank!</div>
+                </div>
                   {/* Ingresar fecha de nacimiento */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Fecha de Nacimiento:
+                  </label>
                     <input
                       placeholder="Ingresar fecha de nacimiento"
                       className="form-control"
@@ -83,6 +100,9 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Dirección */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Dirección:
+                  </label>
                     <input
                       placeholder="Ingresar Dirección"
                       className="form-control"
@@ -95,8 +115,11 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Foto */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Enlace de Imágen:
+                  </label>
                     <input
-                      placeholder="Ingresar foto"
+                      placeholder="Ingresar enlace de imágen"
                       className="form-control"
                       type="text"
                       name="Pathfoto"
@@ -106,6 +129,9 @@ const enviarFormulario = (event) =>{
                   </div>
                   {/* Ingresar Curriculum Vitae */}
                   <div className="col-md-12">
+                  <label htmlFor="level">
+                    Currículum Vitae:
+                  </label>
                     <input
                       placeholder="Ingresar Curriculum Vitae"
                       className="form-control"
@@ -116,9 +142,9 @@ const enviarFormulario = (event) =>{
                     ></input>
                   </div>
                   {/* Boton */}
-                  <div className="col-md-1">
-                    <button className="btn btn-primary">enviar</button>
-                  </div>
+                  <div className="form-button mt-3">
+                  <button id="submit" type="submit" className="btn btn-primary">Guardar</button>
+                </div>
                 </form>
               </div>
             </div>

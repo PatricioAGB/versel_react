@@ -12,8 +12,10 @@
 
 html, body {
     height: 100%;
-    background-color: #152733;
-    overflow: hidden;
+    background-color: #1F2937;
+    overflow: visible;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
 
 
@@ -80,8 +82,11 @@ html, body {
 .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
     color: #fff;
 }
+.form-acl{
+    color:#de2c58;
+}
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content input[type=date], .form-content select {
     width: 100%;
     padding: 9px 20px;
     text-align: left;

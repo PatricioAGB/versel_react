@@ -1,3 +1,4 @@
+//Creado por: Equipo Apache Febrero 2022
 import React from "react";
 //components
 import Curriculum from './components/Curriculum';
@@ -10,32 +11,38 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link
+  Link,
 } from "react-router-dom";
-
+const image = document.createElement('img')
+image.src  = 'https://scontent.fscl21-1.fna.fbcdn.net/v/t1.6435-9/186037485_3891032487629176_9188266185559198408_n.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=5anwDgwVcQQAX8v_Fik&_nc_ht=scontent.fscl21-1.fna&oh=00_AT_YZoVdncuw5geIok6Hqd5DooArzYDlBg8t3uKKRa88ug&oe=6231F766'
+image.width=20;
+image.height=20;
 function App() {
-  return (
+  return ( 
     <>
       <BrowserRouter>
         <div className="container">
           <div className="btn-group">
             {/* Navbar */}
-          <Link to="persona" className="btn btn-dark">
-            Persona
+            <a  className="btn p-0" href="https://www.acl.cl/">
+            <img width="50" height="50" className="p-0" src="https://scontent.fscl21-1.fna.fbcdn.net/v/t1.6435-9/186037485_3891032487629176_9188266185559198408_n.png?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=5anwDgwVcQQAX8v_Fik&_nc_ht=scontent.fscl21-1.fna&oh=00_AT_YZoVdncuw5geIok6Hqd5DooArzYDlBg8t3uKKRa88ug&oe=6231F766" alt=""/>
+          </a> 
+          <Link to="persona" className="btn-primary d-flex align-items-center" >
+            <center>Persona</center>
           </Link>
-          <Link to="curriculum" className="btn btn-dark" > 
-            Curriculum
+          <Link to="curriculum" className="btn-primary d-flex align-items-center" > 
+            <center>Currículum</center>
           </Link>
-          <Link to="evaluacion" className="btn btn-dark" > 
-            Evaluacion
+          <Link to="evaluacion" className="btn-primary d-flex align-items-center" > 
+          <center>Evaluación</center>
           </Link>
-          <Link to="habilidad" className="btn btn-dark" > 
-            Habilidades
+          <Link to="habilidad" className="btn-primary d-flex align-items-center" > 
+          <center>habilidad</center>
           </Link>
           </div>
           {/* Rutas */}
           <Routes>
-            <Route path="/" exact />
+            <Route path="/" element={<FormsPeople />}/>
             <Route path="/persona" element={<FormsPeople />} />
             <Route path="/curriculum" element={<Curriculum />} />
             <Route path="/evaluacion" element={<EvaluationForm />} />
