@@ -24,19 +24,43 @@ const Curriculum = () => {
    // Se muestra los datos en consola 
    const sendForm = (event) => {
       event.preventDefault();
-      console.log(Datos.name + ' ' + Datos.d_number+ ' ' + Datos.date + ' ' + Datos.address + ' ' + Datos.email)
-      fetch('http://localhost:9100/application/api/v1/add',{
-         method : 'Post',
-         headers:{'Conten-Type': 'application/json'},
-         mode: 'no-cors',
-         body: JSON.stringify(Datos)
-      })
-      .then(res => {
-         toast('Registro con exito');
-         return console.log( res );
-      })
+      function uuidv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace("/[018]/g", c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16));
+      }
+      var uuid = null;
+      var ws = null;             
+              ws = new WebSocket("ws://localhost:9998/application/api/ws/v1/add");
 
-   }
+             
+              ws.onclose = function(evt) {
+                // websocket is closed.
+                alert("Connection is closed...");
+              };
+              ws.onopen = function(evt) {
+                alert("Connection is Open...");
+                      if(uuid == null) {
+                              uuid = uuidv4();
+                              ws.send(JSON.stringify(valores));
+                              registWSChannel();
+                      } else { 
+                              sendMessageThroughWS()
+                      }
+              };
+              function sendMessageThroughWS() {
+                var message = JSON.stringify(valores)
+                if(message != "")
+                        ws.send('{"message":"'+message+'"}');
+              }
+      function registWSChannel() {
+              console.log(uuid)
+              ws.send('{"token":"'+uuid+'"}');
+      }
+      console.log(valores); 
+       cambiarFormularioEnviado(true);
+       setTimeout(()=> cambiarFormularioEnviado(false),5000);
+      }
+
+   };
 
 
    return (
@@ -100,6 +124,6 @@ const Curriculum = () => {
          <Toaster />
       </div>
    );
-}
+
 
 export default Curriculum;
